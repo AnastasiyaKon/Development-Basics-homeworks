@@ -38,7 +38,8 @@ function sendRequest(name, phone, address, goods, sum) {
 
      let countOfGoods = goods.length;
      data.client = name + " " + phone;
-     let clientAddress = `ул. ${address.street}, дом ${address.house}, ${address.entrance} подъезд, ${address.floor} этаж, кв ${address.flat}`; 
+     let clientAddress = "ул. " + address.street + ", дом " + address.house +
+    ", " + address.entrance + " подъезд, " + address.floor + " этаж, кв " + address.flat;
      data.order.adress = clientAddress;
      data.order.sum = sum;
 
