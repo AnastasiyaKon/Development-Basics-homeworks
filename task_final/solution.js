@@ -34,11 +34,12 @@
 // }
 
 function sendRequest(name, phone, address, goods, sum) {
-    let { = { data: {client: ", 
-    order: {address: ", sum: "}, 
-    goods: []}
+    let { = { data: {
+        client: ", 
+        order: {address: ", sum: "}, 
+        goods: []}
 };
-    objectData.data.client = `${name} ${phone}`;
+    objectData.data.client = name + ' ' + phone;
     objectData.data.order.address = "ул. " + address.street + ", дом " + address.house + ", " + address.entrance + " подъезд, " + address.floor + " этаж, кв " + address.flat;
     objectData.data.order.sum = sum;
     goods.forEach((product) => {
@@ -49,7 +50,7 @@ function sendRequest(name, phone, address, goods, sum) {
       })
 
 
-     let jsonData = JSON.stringify({data});
+     let jsonData = JSON.stringify(objectData);
 
     return jsonData;
 }
